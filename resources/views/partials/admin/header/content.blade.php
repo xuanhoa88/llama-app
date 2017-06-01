@@ -1,5 +1,6 @@
 <!-- Content Header (Page header) -->
 <section class="content-header">
+
     <h1>
         @yield('content_header_title', 'Page Header here')
         
@@ -11,4 +12,5 @@
     @if (Breadcrumb::exists())
     	{!! Breadcrumb::view(null, 'partials/admin/breadcrumb') !!}
     @endif
+    
 </section>

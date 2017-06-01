@@ -167,9 +167,10 @@ return [
          * Package Service Providers...
          */
         Laravel\Tinker\TinkerServiceProvider::class,
-        Llama\Modules\ModuleServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
+        Llama\Modules\ModuleServiceProvider::class,
         Llama\Breadcrumbs\BreadcrumbServiceProvider::class,
+        Llama\Menus\MenuServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -228,10 +229,11 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-        'Module' => Llama\Modules\Facades\Module::class,
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
+        'Module' => Llama\Modules\Facades\Module::class,
         'Breadcrumb' => Llama\Breadcrumbs\Facades\Breadcrumb::class,
+        'Menu' => Llama\Menus\Facades\Menu::class,
 
     ],
 

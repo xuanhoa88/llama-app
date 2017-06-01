@@ -12,19 +12,6 @@ class HomeController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
-        
-        // Home
-        \Breadcrumb::set('admin', function($breadcrumbs)
-        {
-            $breadcrumbs->push('Dashboard', url('/admin'));
-        });
-        
-        // Home > User
-        \Breadcrumb::set('home', function($breadcrumbs)
-        {
-            $breadcrumbs->parent('admin');
-            $breadcrumbs->push('User', url('/admin/users'));
-        });
     }
 
     /**

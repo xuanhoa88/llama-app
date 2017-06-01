@@ -1,7 +1,7 @@
 @extends('layouts/error')
 
 @section('html_header_title')
-    {{ trans('message.pageNotFound') }}
+    {{ trans('error.pageNotFound') }}
 @endsection
 
 @section('content')
@@ -9,19 +9,18 @@
     <div class="error-page">
         <h2 class="headline text-yellow">404</h2>
         <div class="error-content">
-            <h3><i class="fa fa-warning text-yellow"></i> Oops! {{ trans('message.pageNotFound') }}.</h3>
+            <h3><i class="fa fa-warning text-yellow"></i> {{ trans('error.pageNotFound') }}.</h3>
             <p>
-                {{ trans('message.notFindPage') }}
-                {{ trans('message.mainWhile') }} <a href="{{ url('/') }}">{{ trans('message.returnDashboard') }}</a> {{ trans('message.usingSearch') }}
+                {!! trans('error.notFindPage', ['url' => url('/')]) !!}
             </p>
-            <form class="search-form">
+            {!! Form::open(['class' => 'search-form']) !!}
                 <div class="input-group">
-                    <input type="text" name="search" class="form-control" placeholder="{{ trans('message.search') }}"/>
+                	{!! Form::text('search', null, ['class' => 'form-control', 'placeholder' => trans('error.search')]) !!}
                     <div class="input-group-btn">
-                        <button type="submit" name="submit" class="btn btn-warning btn-flat"><i class="fa fa-search"></i></button>
+                    	{!! Form::button('<i class="fa fa-search"></i>', ['class' => 'btn btn-warning btn-flat', 'type' => 'submit']) !!}
                     </div>
                 </div><!-- /.input-group -->
-            </form>
+            {!! Form::close() !!}
         </div><!-- /.error-content -->
     </div><!-- /.error-page -->
 @endsection

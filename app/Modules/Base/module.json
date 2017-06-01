@@ -1,0 +1,10 @@
+{
+    "name": "Base",
+    "alias": "base",
+    "active": 1,
+    "order": 0,
+    "providers": [
+        "App\\Modules\\Base\\Providers\\BaseServiceProvider",
+        "App\\Modules\\Base\\Providers\\BaseRouteServiceProvider"
+    ]
+}

@@ -11,12 +11,14 @@
 		
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
-    
             @include('partials/admin/header/content')
     
             <!-- Main content -->
             <section class="content">
-                <!-- Your Page Content Here -->
+            	<!-- Alert -->
+            	@include('partials/admin/alert')
+            	
+            	<!-- Content -->
                 @yield('content')
             </section><!-- /.content -->
         </div><!-- /.content-wrapper -->
